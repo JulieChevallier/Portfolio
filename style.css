@@ -4,10 +4,8 @@
 mode nuit/jour
 version info/art
 
-scroll-behavior
 add js
-
-content or contentBx pour aligner mon formulaire*/
+*/
 
 
 *
@@ -16,7 +14,10 @@ content or contentBx pour aligner mon formulaire*/
     padding: 0;
     box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace;
+    scroll-behavior: smooth;
 }
+
+
 
 body
 {
@@ -130,7 +131,7 @@ header ul li a
     text-decoration: none;
 }
 
-#about
+.about
 {
     margin-bottom: -40px;
 }
@@ -204,11 +205,21 @@ hr
     margin-top: 20px;
 }
 
-#contact,
-#projects
+.contact,
+.projects
 {
     margin-top: -40px;
     margin-bottom: -40px;
+}
+.contact .content
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .content .formBx
+{
+    margin-top: -50px;
 }
 
 .formBx
@@ -342,6 +353,17 @@ hr
 
 @media (max-width:991px)
 {
+    .contact .content
+    {
+        display: contents;
+        justify-content: space-between;
+    }
+
+    .contact .content .formBx
+    {
+        margin-top: 0px;
+    }
+
     .project
     {
         padding: 10px 20px;
@@ -372,7 +394,7 @@ hr
     }
 
     .contactInfoBx .box .text {
-        font-size: 11px;
+        font-size: 70%;
         font-weight: 300;
     }
 
@@ -438,9 +460,9 @@ hr
         cursor: pointer;
     }
 
-    #contact,
-    #projects,
-    #about
+    .contact,
+    .projects,
+    .about
     {
         margin-top: 0px;
         margin-bottom: 0px;

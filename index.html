@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Portfolio</title>
+    <title>Portfolio - Julie Chevallier</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="ressources/J.png" />
 </head>
@@ -30,7 +30,7 @@
     </section>
 
     <!-- About me -->
-    <section id="about">
+    <section class="about" id="about">
         <div class="heading">
             <h3>About Me</h3>
         </div>
@@ -53,7 +53,7 @@
 
     <hr>
     <!-- Projects -->
-    <section id="projects">
+    <section class="projects" id="projects">
         <div class="heading">
             <h3>Projects</h3>
         </div>
@@ -96,12 +96,12 @@
 
     <hr>
     <!-- Contact -->
-    <section id="contact">
+    <section class="contact" id="contact">
         <div class="heading">
             <h3>Contact</h3>
         </div>
         <div class="content">
-            <div class="contentBx">
+            <div class="contactInfo">
                 <div class="contactInfoBx">
                     <div class="box">
                         <div class="icon"><img class="icon1" src="ressources/adress-icon.png"></div>
@@ -129,13 +129,20 @@
                 </div>
             </div>
             <div class="formBx">
-                <form>
+                <form method="post">
                     <h3>Message Me</h3>
-                    <input type="text" name="" placeholder="Full Name">
-                    <input type="email" name="" placeholder="Email">
-                    <textarea placeholder="Your Message"></textarea>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Your Message" require ></textarea>
                     <input type="submit" value="Send">
                 </form>
+                <!-- <?php
+                if (isset($_POST['message'])) {
+                    $retour = mail('julie.chevallier.contactpro@gmail.com', 'Envoi depuis le Portfolio', $_POST['message'], 'From: webmaster@julie-chevallier.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+                    if($retour)
+                        echo '<p>Votre message a bien été envoyé.</p>';
+                }
+                ?> -->
             </div>
         </div>
     </section>
