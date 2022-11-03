@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ressources/J.png" />
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <ul class="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <a href="#" class="logo">Portfolio</a>
+    </header>
+
+    <!-- banner -->
+    <section class="banner">
+        <div class="textBx">
+            <h2>I'm Julie Chevallier, a student in Computer Science,</h2>
+            <h3>make vidéo games, drawing & programming</h3>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about">
+        <div class="heading">
+            <h3>About Me</h3>
+        </div>
+        <div class="content">
+            <div class="contentBx">
+                <p>
+                    I'm a student in Computer Science. 
+                    Ici je me présente moi, mes études, ma passion tout. je peux reprendre le txt sur mon cv et sur mon linkedin pour m'aide je pense
+                    <br><br>
+                    pour faire une autre paragraphe je fais comme ça et voilà le tour est joué
+                </p>
+            </div>
+            <div class="link">
+                <a href="https://github.com/Sliimsey" class="github"><img src="ressources/github-icon.png"></a>
+                <a href="https://www.root-me.org/Sliimsey" class="rootme"><img src="ressources/rootme-icon.png"></a>
+                <a href="https://www.linkedin.com/in/julie-chevallier-66018622b/" class="linkedin"><img src="ressources/linkedin-icon.png"></a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <!-- Projects -->
+    <section id="projects">
+        <div class="heading">
+            <h3>Projects</h3>
+        </div>
+        <div class="content">
+            <div class="contentBx">
+                <p>
+                Description
+                </p>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>
+                    Lorem impsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <a class="iconlink" href=""><img src="ressources/link-icon.png"> Link project </a>
+                </div>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>
+                    Lorem impsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <a class="iconlink" href=""><img src="ressources/link-icon.png"> Link project </a>
+                </div>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>
+                    Lorem impsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <a class="iconlink" href=""><img src="ressources/link-icon.png"> Link project </a>
+                </div>
+                <div class="project">
+                    <h3>Project Name</h3>
+                    <p>
+                    Lorem impsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <a class="iconlink" href=""><img src="ressources/link-icon.png"> Link project </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <!-- Contact -->
+    <section id="contact">
+        <div class="heading">
+            <h3>Contact</h3>
+        </div>
+        <div class="content">
+            <div class="contentBx">
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon"><img class="icon1" src="ressources/adress-icon.png"></div>
+                        <div class="text">
+                            <h3>Adress</h3>
+                            <p>13 rue des hospices,<br>Montpellier, France,<br>34090</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><img class="icon2" src="ressources/phone-icon.png"></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>06.67.41.66.74</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="icon"><img class="icon3" src="ressources/envelop-icon.png"></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>julie.chevallier.contactpro@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Message Me</h3>
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <div class="copyright">
+        <p>Made by Julie Chevallier</p>
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('nav',window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
+        }
+    </script>
+
+    
+</body>
+</html>
