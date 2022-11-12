@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
-/* langue anglais/français
+/* 
+langue anglais/français
 mode nuit/jour
-version info/art
-
-quand nav border-bottom
 
 cybersécurité + dev jeu -> Mes objectifs
+image gallery
+add text about me
 
-add js
+add responsive skills & gallery
+add js quand hover sur un titre + link
+envoie mail
+slider img project
+
+background video compresser, when scroll s'assombrit
+refund menu, only burger + anim cross + come bottom + refaire le text des sections en gras + hover + cache navbar quand actif
+gallery img hover sa grandit(mieux que système de click)
+gallery + aérer et arrondi
+skills card (linear) + click on -> info quel projet context
 */
 
 
@@ -42,11 +51,26 @@ section
     padding: 10%;
 }
 
+video
+{   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-height: 100vh;
+    z-index: 5;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .banner
 {
     position: relative;
     min-height: 100vh;
-    background: url(ressources/banner.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -54,39 +78,125 @@ section
     align-items: center;
 }
 
+.banner .textBx
+{
+    z-index: 10;
+}
+
+.textBx
+{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; */
+    line-height: 0.5em;
+}
+
+.textTitle
+{
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 900;
+    background: linear-gradient(90deg, #8a2cf7, #102fdf  , #dd33cf);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner .name
+{
+    font-size: 4.5em;
+    line-height: 1.1em;
+    font-weight: 700;
+    font-family: 'Heebo', monospace;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(ressources/back.png);
+    -webkit-background-clip: text;
+            background-clip: text;
+    background-position: 0 0;
+    animation: back 25s linear infinite;
+}
+@keyframes back
+{
+    100%
+    {
+        background-position: 2000px 0;;
+    }
+}
+
 .banner h2
 {
-    font-size: 2em;
+    font-size: 2.5em;
+    line-height: 0.7em;
     color : #fff;
-    font-weight: 500;
-    line-height: 1.5em;
+    font-weight: 700;
 }
 
 .banner h3
 {
     font-size: 1.5em;
+    line-height: 3em;
     color : #fff;
     font-weight: 500;
 }
 
 .btn
 {
-    position: relative;
-    background: #222;
+    position: absolute;
+    /* background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4); */
+    background: linear-gradient(90deg, #8a2cf7, #3c59fd  , #dd33cf, #8a2cf7);
+    background-size: 400%;
+    border-radius: 5px;
     display: inline-block;
     color : #fff;
     margin-top: 20px;
-    padding: 10px 25px;
-    font-size: 13px;
+    padding: 15px 25px;
+    font-size: 15px;
     text-decoration : none;
     letter-spacing: 2px;
-    font-weight: 500;
-    border-radius: 5px;
+    font-weight: 900;
 }
 
-.btn:hover {
-    background: #b4b0b0;
-  }
+.btn:hover
+{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
+}
+
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #8a2cf7, #3c59fd  , #dd33cf, #8a2cf7);
+    background-size: 400%;
+    border-radius: 5px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.btn:hover::before
+{
+    filter: blur(20px);
+    opacity: 1;
+}
 
 header
 {
@@ -112,16 +222,35 @@ header.nav
 header .logo
 {
     color : #fff;
-    font-size: 24px;
+    font-size: 2em;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
+    position: relative;
 }
 
-header .logo:hover
+header .logo::after
 {
-    color : #b4b0b0;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
 }
+
+header .logo:hover::after
+{
+    width: 75%;
+}
+
+/*header .logo:hover
+{
+    font-weight: bolder;
+} */
 
 header ul
 {
@@ -142,6 +271,27 @@ header ul li a
     margin: 0 15px;
     color: #fff;
     text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+
+}
+
+header ul li a::after
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+
+header ul li a:hover::after
+{
+    width: 50%;
 }
 
 .about
@@ -155,6 +305,7 @@ header ul li a
     margin-bottom: 20px;
     color: #fff;
 }
+
 
 .heading h3
 {
@@ -271,13 +422,29 @@ hr
 .formBx form input[type="submit"]
 {
     max-width: 100px;
-    background: #7F71FF;
+    background: linear-gradient(90deg, #8a2cf7, #3c59fd);
     color: #fff;
     font-weight: 500;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-radius: 5px;
+}
+
+.formBx form input[type="submit"]:hover
+{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
 }
 
 .contentBx
@@ -561,6 +728,8 @@ svg circle:nth-child(2)
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    border-radius: 5px;
+
 }
 
 #index-gallery .img1
@@ -759,6 +928,8 @@ div.img-window
         padding: 20px 50px;
         z-index: 1000;
         color:#fff;
+        font-size: 1.2em;
+        font-weight: 800;
     }
 
     header.nav .menu
@@ -779,7 +950,8 @@ div.img-window
         background: #171717;
         transition: 0.5s;
         z-index: 999;
-        border-top: 1px solid rgba(0,0,0,0.2);
+        border-top: 110px solid rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.8);
     }
 
     .menu.active
