@@ -13,11 +13,11 @@ add js quand hover sur un titre + link
 envoie mail
 slider img project
 
-background video compresser, when scroll s'assombrit
+when scroll s'assombrit
 refund menu, only burger + anim cross + come bottom + refaire le text des sections en gras + hover + cache navbar quand actif
 gallery img hover sa grandit(mieux que système de click)
-gallery + aérer et arrondi
-skills card (linear) + click on -> info quel projet context
+gallery + aérer
+card reset, placement droite, adaptation text
 */
 
 
@@ -50,6 +50,8 @@ section
 {
     padding: 10%;
 }
+
+/* //////BANNER////// */
 
 video
 {   
@@ -198,6 +200,8 @@ video
     opacity: 1;
 }
 
+/* //////NAV////// */
+
 header
 {
     position: fixed;
@@ -294,10 +298,7 @@ header ul li a:hover::after
     width: 50%;
 }
 
-.about
-{
-    margin-bottom: -40px;
-}
+/* //////SECTION////// */
 
 .heading
 {
@@ -312,12 +313,22 @@ header ul li a:hover::after
     font-size: 1.5em;
 }
 
-
 .content
 {
     color: #666;
 }
 
+.contentBx
+{
+ min-width: 40%;
+}
+
+/* //////ABOUT////// */
+
+.about
+{
+    margin-bottom: -40px;
+}
 
 .link img
 {
@@ -326,6 +337,120 @@ header ul li a:hover::after
     margin-top: 20px;
     margin-right: 10px;
 }
+
+hr
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    border : 0;
+    border-top: 1px solid #303030;
+}
+
+:root {
+    --step: 5%;
+    --pattern: center / 75%;
+  
+    --rainbow: repeating-linear-gradient(
+        0deg,
+        rgb(255, 119, 115) calc(var(--step) * 1),
+        rgba(255, 237, 95, 1) calc(var(--step) * 2),
+        rgba(168, 255, 95, 1) calc(var(--step) * 3),
+        rgba(131, 255, 247, 1) calc(var(--step) * 4),
+        rgba(120, 148, 255, 1) calc(var(--step) * 5),
+        rgb(216, 117, 255) calc(var(--step) * 6),
+        rgb(255, 119, 115) calc(var(--step) * 7)
+      )
+      0% var(--bg-y) / 200% 700%;
+    --diagonal: repeating-linear-gradient(
+        128deg,
+        #0e152e 0%,
+        hsl(180, 10%, 60%) 3.8%,
+        hsl(180, 10%, 60%) 4.5%,
+        hsl(180, 10%, 60%) 5.2%,
+        #0e152e 10%,
+        #0e152e 12%
+      )
+      var(--bg-x) var(--bg-y) / 300%;
+    --shade: radial-gradient(
+        farthest-corner circle at var(--x) var(--y),
+        rgba(255, 255, 255, 0.1) 12%,
+        rgba(255, 255, 255, 0.15) 20%,
+        rgba(255, 255, 255, 0.25) 120%
+      )
+      var(--bg-x) var(--bg-y) / 300%;
+}
+.about .card {
+    width: 285px; /*380*/
+    height: 350px; /*467*/
+    box-sizing: border-box;
+    position: relative;
+}
+
+.about .card__wrapper
+{
+    perspective: 2400px;
+    position: absolute;
+    inset: 0;
+}
+.about .card__3d
+{
+    transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+    position: absolute;
+    inset: 0;
+    clip-path: inset(0 0 0 0 round 48px);
+}
+.about .card__image {
+    clip-path: inset(0 0 0 0 round 48px);
+}
+.about .card__image img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+  
+/* soft light */
+.about .card__layer1 {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    mix-blend-mode: soft-light;
+    clip-path: inset(0 0 1px 0 round 48px);
+    background: radial-gradient(
+      farthest-corner circle at var(--x) var(--y),
+      rgba(255, 255, 255, 0.8) 10%,
+      rgba(255, 255, 255, 0.65) 20%,
+      rgba(255, 255, 255, 0) 90%
+    );
+}
+/* first crazy blend  */
+.about .card__layer2 {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+  
+    mix-blend-mode: color-dodge;
+    will-change: background;
+    transition-property: opacity;
+    clip-path: inset(0 0 1px 0 round 48px);
+  
+    background-blend-mode: hue, hue, hard-light, overlay;
+    background: var(--pattern), var(--rainbow), var(--diagonal);
+}
+/* second crazy blend  */
+.about .card__layer2:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--pattern), var(--rainbow), var(--diagonal), var(--shade);
+    mix-blend-mode: exclusion;
+    background-size: 75%, 200% 400%, 800%, 200%;
+    background-position: center, 0% var(--duration) var(--bg-y),
+      calc(var(--bg-x) * -1) calc(var(--bg-y) * -1), var(--bg-x) var(--bg-y);
+    background-blend-mode: soft-light, hue, hard-light;
+}
+
+/* //////PROJECT////// */
 
 .project
 {
@@ -341,19 +466,12 @@ header ul li a:hover::after
     border: 1px solid #303030;
     border-radius: 10px;
 }
+
 .project p
 {
     margin-top: 20px;
     font-size: 15px;
     color: #666;
-}
-
-hr
-{
-    margin-left: 10%;
-    margin-right: 10%;
-    border : 0;
-    border-top: 1px solid #303030;
 }
 
 .iconlink
@@ -369,6 +487,8 @@ hr
     height: 15px;
     margin-top: 20px;
 }
+
+/* //////CONTACT////// */
 
 .contact .content
 {
@@ -422,7 +542,9 @@ hr
 .formBx form input[type="submit"]
 {
     max-width: 100px;
-    background: linear-gradient(90deg, #8a2cf7, #3c59fd);
+    background: linear-gradient(90deg, #8a2cf7, #3c59fd  , #dd33cf, #8a2cf7);
+    background-size: 400%;
+    display: inline-block;
     color: #fff;
     font-weight: 500;
     cursor: pointer;
@@ -447,10 +569,6 @@ hr
     }
 }
 
-.contentBx
-{
- min-width: 40%;
-}
 
 .contactInfoBx
 {
@@ -517,6 +635,8 @@ hr
     margin-right: 10px;
 }
 
+/* //////FOOTER////// */
+
 .copyright
 {
     color: #666;
@@ -525,6 +645,7 @@ hr
     font-size: 0.7em;
 }
 
+/* //////SKILLS////// */
 
 svg
 {
@@ -552,42 +673,42 @@ svg circle:nth-child(2)
     stroke-dashoffset: 440;
 }
 
-.card:nth-child(1) svg circle:nth-child(2)
+.skills .card:nth-child(1) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 90)/100);
 }
 
-.card:nth-child(2) svg circle:nth-child(2)
+.skills .card:nth-child(2) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 70)/100);
 }
 
-.card:nth-child(3) svg circle:nth-child(2)
+.skills .card:nth-child(3) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 65)/100);
 }
 
-.card:nth-child(4) svg circle:nth-child(2)
+.skills .card:nth-child(4) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 40)/100);
 }
 
-.card:nth-child(5) svg circle:nth-child(2)
+.skills .card:nth-child(5) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 80)/100);
 }
 
-.card:nth-child(6) svg circle:nth-child(2)
+.skills .card:nth-child(6) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 90)/100);
 }
 
-.card:nth-child(7) svg circle:nth-child(2)
+.skills .card:nth-child(7) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 40)/100);
 }
 
-.card:nth-child(8) svg circle:nth-child(2)
+.skills .card:nth-child(8) svg circle:nth-child(2)
 {
     stroke-dashoffset: calc(440 - (440 * 80)/100);
 }
@@ -605,7 +726,7 @@ svg circle:nth-child(2)
 {
     position: relative;
     width: 250px;
-    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    background: linear-gradient(0deg, #423c75, #303030, #483f96);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -635,7 +756,7 @@ svg circle:nth-child(2)
     z-index: 1;
 }
 
-.card
+.skills .card
 {
     margin-top: 20px;
 }
@@ -672,7 +793,7 @@ svg circle:nth-child(2)
     transition: 0.5s;
 }
 
-.card:hover .percent .number h2
+.skills .card:hover .percent .number h2
 {
     color: #fff;
     font-size: 60px;
@@ -684,7 +805,7 @@ svg circle:nth-child(2)
     color: #777;
 }
 
-.card:hover .percent .number h2 span
+.skills .card:hover .percent .number h2 span
 {
     color: #fff;
 }
@@ -701,12 +822,32 @@ svg circle:nth-child(2)
     transition: 0.5s;
 }
 
-.card:hover .text
+.skills .card:hover .text
 {
     color: #fff;
 }
 
+.skills .container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
 
+#skills .card
+{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+/* //////GALLERY////// */
 
 #index-gallery
 {
@@ -774,8 +915,6 @@ svg circle:nth-child(2)
     grid-area: img7;   
     background-image: url("img/img7.png");
 }
-
-
 
 .gallery-img div
 {
@@ -872,7 +1011,7 @@ div.img-window
 
 
 
-
+/* //////RESPONSIVE////// */
 
 
 @media (max-width:991px)
