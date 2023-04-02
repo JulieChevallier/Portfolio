@@ -1,7 +1,4 @@
-window.addEventListener('scroll',function(){
-    var header = document.querySelector('header');
-    header.classList.toggle('nav',window.scrollY > 0);
-});
+
 
 function toggleMenu(){
     var menuToggle = document.querySelector('.toggle');

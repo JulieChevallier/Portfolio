@@ -1,307 +1,578 @@
 <!DOCTYPE html>
-<html>
+<html class="has-scroll-smooth">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Portfolio - Julie Chevallier</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="ressources/J.png" />
+    <link rel="icon" href=""/> <!-- TODO -->
 </head>
 <body>
-    <!-- navbar -->
+    <!-- Nav -->
     <header>
         <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#index-gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#myprojects">Projects</a></li>
+            <li><a href="#myskills">Skills</a></li>
+            <li><a href="#contactme">Contact</a></li>
         </ul>
 
         <div class="toggle" onclick="toggleMenu();"></div>
         <a href="#" class="logo">Portfolio</a>
     </header>
 
-    <!-- banner -->
+    <!-- Background -->
     <section class="banner">
-        <video loop muted autoplay preload="auto">
-            <source src="ressources/video1.m4v" type="video/mp4">
-        </video>
+        <img class="color" src="ressources/home.jpg">
+        <div class="dot"></div>
         <div class="textBx">
-            <h1 class="textTitle">Welcome!</h1>
-            <h2>I'm</h2>
-            <br><h1 class="name">Julie Chevallier</h1>
-            <h2><br>a student in Computer Science,</h2>
-            <h3>make vidéo games, drawing & programming.</h3>
-            <a href="#about" class="btn">About Me</a>
+            <div>
+                <div>
+                    <hr id="t1">
+                    <hr id="t2">
+                    <hr id="t3">
+                </div>
+            </div>
+            <div>
+                <div class="middle">
+                    <div id="myname">
+                        <br><h1 class="surname">CHEVALLIER</h1>
+                        <br><h1 class="name">JULIE</h1>
+                    </div>
+                    <img class="startimg" srcset="ressources/startimg.png">
+                </div>
+                <div class="startfooter">
+                    <div id="contactimg">
+                        <a href="https://github.com/JulieChevallier" target="_blank"><img class="github" src="ressources/github-icon.png"/></a>
+                        <a href="https://www.linkedin.com/in/julie-chevallier-66018622b/" target="_blank"><img class="linkedin" src="ressources/linkedin-icon.png"/></a>
+                    </div>
+                <h1 class="J">J.</h1>
+                </div>
+            </div>
+            <a href="#aboutme" class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </div>
+        <div class="titlePortfolio">
+            <span>Passionate about</span>
+            <span class="typing thatAfroGreetings">COMPUTER SCIENCE</span>
+        </div>
+
     </section>
 
-    <!-- About me -->
-    <section class="about" id="about">
-        <div class="heading">
-            <h3>About Me</h3>
+    <section class="interval">
+        <span id="aboutme"></span>
+        <div class="section-decorators">
+            <div class="scrollBox"></div>
+            <div class="scrollBox"></div>
+            <div class="scrollBox"></div>
         </div>
-        <div class="content">
-            <div class="contentBx">
-                <p>
-                    I'm a student in Computer Science at IUT of Montpellier-Sète.
-                    <br><br>
-                    Passionate about video games and software development, mathematics and graphic design. I spend my free time to learn and develop new things. I regularly participate in Jam allowing me to surpass myself by acquiring new skills and to meet new people (ActinSpace in 2022, Code Game Jam in 2022, Nuit de l'Info in 2021).</p>
+    </section>
+    
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div>
+            <div class="titleSection-n">
+                <hr>
+                <p class="title" onmouseover="hoverAbout()" onmouseout="hoverEnd()">
+                    ABOUT ME
+                </p>
+                <hr>
             </div>
-            <div class="link">
-                <a href="https://github.com/Sliimsey" class="github"><img src="ressources/github-icon.png"></a>
-                <a href="https://www.root-me.org/Sliimsey" class="rootme"><img src="ressources/rootme-icon.png"></a>
-                <a href="https://www.linkedin.com/in/julie-chevallier-66018622b/" class="linkedin"><img src="ressources/linkedin-icon.png"></a>
-            </div>
-            <!-- <div class="card">
-                <div class="card__wrapper">
-                    <div class="card__3d">
-                        <div class="card__image">
-                        <img src="http://allyourhtml.club/carousel/image.webp" alt="" />
+            <div class="profile">
+                <div class="outer-square">
+                    <span class="textcoord coord-text">X= 0, Y= 0</span>
+                    <div class="overlay-square"></div>
+                    <div class="inner-square">
+                        <div id="command">
+                            <p>
+                                <span class="username">helloworld</span><span class="at">@</span><span class="pc">portfolio</span><span class="colon">:</span><span class="tilde">~</span><span class="dollar">$ cat profil.txt</span>
+                            </p>
                         </div>
-                    <div class="card__layer1"></div>
-                    <div class="card__layer2"></div>
+                        <div>
+                            <p id="description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <br><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <script src="scriptCard.js" type="text/javascript"></script> -->
         </div>
     </section>
 
-    <hr>
-    <!--Skills -->
-    <section class="skills" id="skills">
-        <div class="heading">
-            <h3>Skills</h3>
+
+    <section class="interval">
+        <span id="myprojects"></span>
+        <div class="section-decorators">
+            <div class="scrollBox2"></div>
+            <div class="scrollBox2"></div>
+            <div class="scrollBox2"></div>
         </div>
-        <div class="content">
-            <div class="contentBx">
-                <p>
-                Current computer skills
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div>
+            <div class="titleSection-b">
+                <hr>
+                <p class="title" onmouseover="hoverProjects()" onmouseout="hoverEnd()">
+                    PROJECTS
                 </p>
-            </div>
-            <div class="container">
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>90<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">Java</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>70<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">C</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>65<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">C#</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>40<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">C++</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>80<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">SQL</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>90<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">HTML/CSS</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>40<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">Javascript</h2>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <div class="percent">
-                            <svg>
-                                <circle cx="70" cy="70" r="70"></circle>
-                                <circle cx="70" cy="70" r="70"></circle>
-                            </svg>
-                            <div class="number">
-                                <h2>80<span>%</span></h2>
-                            </div>
-                        </div>
-                        <h2 class="text">PHP</h2>
-                    </div>                  
-                </div> 
+                <hr>
             </div>
         </div>
-    </section>
-
-    <hr>
-    <!-- Projects -->
-    <section class="projects" id="projects">
-        <div class="heading">
-            <h3>Projects</h3>
-        </div>
+        <img class="color" srcset="ressources/home.jpg">
+        <div class="dot"></div>
+        
         <div class="content">
-            <div class="contentBx">
-                <p>
-                Projects that I've been worked
-                </p>
-                <div class="project">
-                    <h3>Double Snake</h3>
-                    <p>
-                    Double Snake game made in C++ with the SDL 2 library in November 2022.<br><br>
-                    The double snake is a game inspired by the famous snake game.<br>
-                    But this time, the objective is to guide his own snake to kill the opponent by leading him to the collision.
-                    To do this, food is available on the screen to make your snake grow. 
-                    Be careful, to win you will have to avoid collisions with walls, the body of the opponent's snake as well as your own body.<br>
-                    The arrow keys change the direction of the snake for player 1 and zqsd for player 2. RETURN (ENTER) pauses the game.
-                    </p>
-                    <a class="iconlink" href="https://github.com/Nayggets/Double-Snake"><img src="ressources/link-icon.png"> Github/Double-Snake </a>
-                    <img src="">
+            <div class="project" id="project1">
+                <div class="test">
+                    <div class="under">
+                        <span>Docker</span>
+                        <span>Java</span>  
+                        <span>Cryptography</span>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="hover">
+                        <div class="hovertxt">
+                            <div class="info">School Project • 2023</div>
+                            <div class="projectname">CompanyPoll</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="projectimg" srcset="ressources/Project/CompanyPoll.png"/>
+                        <div class="square1"></div>
+                        <div class="square2"></div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Ticket to Ride Europe</h3>
-                    <p>
-                    Ticket to Ride Europe game made in Java and JavaFX on Intellij IDEA IDE in June 2022.<br><br>
-                    This game is a digital version of the board game of the same name.<br>
-                    </p>
-                    <a class="iconlink" href="https://github.com/Sliimsey/AventuriersDuRail"><img src="ressources/link-icon.png"> Github/Ticket-to-Ride </a>
+                <div class="project-info">
+                    <h2 class="project-title"></h2>
+                    <div class="project-group">
+                        <p class="project-description"></p>
+                        <img class="project-img" src="">
+                    </div>
+                    <img class="projectgithub" srcset="ressources/github-icon.png"/>
+                    <button class="close-btn"></button>
                 </div>
-                <div class="project">
-                    <h3>Puzzle Solving Algorithm</h3>
-                    <p>
-                    Made in Java, this project was programming n Intellij IDEA IDE in April 2022.<br><br>
-                    This algorithm allows to solve by total exploration any "puzzle".<br>
-                    To improve the efficiency of the algorithm, it uses Collections in Java which allows it to solve any puzzle in a short time.<br>
-                    This project contains three different examples of puzzles that can be solved with the algorithm, the Taquins, the Towers of Hanoi and the famous Sudoku.
-                    </p>
-                    <a class="iconlink" href="https://github.com/Sliimsey/PuzzleSolvingAlgorithm"><img src="ressources/link-icon.png"> Github/Puzzle-Solving-Algorithm </a>
+                <div class="project-overlay"></div>
+            </div>
+
+
+            <div class="projectd" id="project2">
+                <div class="test">
+                    <div class="under">
+                        <span>Javascript</span>
+                        <span>PHP</span>  
+                        <span>Tailwind CSS</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="hover">
+                        <div class="hovertxt">
+                            <div class="info">School Project • 2022</div>
+                            <div class="projectname">Votee</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="projectimg" srcset="ressources/Project/Votee.png"/>
+                        <div class="square1"></div>
+                        <div class="square2"></div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Votee</h3>
-                    <p>
-                    The site Votee made in HTML/CSS, JavaScript, PHP and SQL on PhpStorm IDE in December 2022.<br><br>
-                    The Votee application is a web application for collective decision-making (or participatory democracy). Once deployed on a permanently open server, this web application allows to manage a large set of questions (independent of each other).<br>
-                    </p>
-                    <a class="iconlink" href="https://github.com/Sliimsey/Votee"><img src="ressources/link-icon.png"> Github/Votee </a>
+                <div class="project-info">
+                    <h2 class="project-title"></h2>
+                    <div class="project-group">
+                        <p class="project-description"></p>
+                        <img class="project-img" src="">
+                    </div>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="project-overlay"></div>
+            </div>
+
+
+            <div class="project" id="project3">
+                <div class="test">
+                    <div class="under">
+                        <span>Unity</span>
+                        <span>C#</span>  
+                        <span>Aseprite</span>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="hover">
+                        <div class="hovertxt">
+                            <div class="info">Event Project • 2023</div>
+                            <div class="projectname">TimeBomb</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="projectimg" srcset="ressources/Project/Votee.png"/>
+                        <div class="square1"></div>
+                        <div class="square2"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title"></h2>
+                    <div class="project-group">
+                        <p class="project-description"></p>
+                        <img class="project-img" src="">
+                    </div>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="project-overlay"></div>
+            </div>
+
+
+            <div class="projectd" id="project4">
+                <div class="test">
+                    <div class="under">
+                        <span>Java</span>
+                        <span>JavaFx</span>  
+                        <span>Graph theory</span>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="hover">
+                        <div class="hovertxt">
+                            <div class="info">School Project • 2022</div>
+                            <div class="projectname">Aventuriers du rail</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="projectimg" srcset="ressources/Project/AventuriersDuRail2.jpg"/>
+                        <div class="square1"></div>
+                        <div class="square2"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title"></h2>
+                    <div class="project-group">
+                        <p class="project-description"></p>
+                        <img class="project-img" src="">
+                    </div>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="project-overlay"></div>
+            </div>
+
+
+
+            <div class="project" id="project5">
+                <div class="test">
+                    <div class="under">
+                        <span>SDL2</span>
+                        <span>C++</span>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="hover">
+                        <div class="hovertxt">
+                            <div class="info">Personnal Project • 2022</div>
+                            <div class="projectname">DoubleSnake</div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="projectimg" srcset="ressources/Project/DoubleSnake.png"/>
+                        <div class="square1"></div>
+                        <div class="square2"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title"></h2>
+                    <div class="project-group">
+                        <p class="project-description"></p>
+                        <img class="project-img" src="">
+                    </div>
+                    <button class="close-btn"></button>
+                </div>
+                <div class="project-overlay"></div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-top">
+                        <img class="card-image-left" src="image-left.jpg">
+                        <img class="card-image-right" src="ressources/github.svg">
+                    </div>
+                    <div class="card-middle">
+                        <div>
+                            <h2 class="card-title">MamieTel</h2>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ultrices odio vitae malesuada.
+                            </p>
+                        </div>
+                        <div class="card-bottom">
+                            <p class="card-bottom-text">Javascript</p>
+                            <p class="card-bottom-text">HTML</p>
+                            <p class="card-bottom-text">CSS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img class="card-image-left" src="image-left.jpg">
+                        <img class="card-image-right" src="ressources/github.svg">
+                    </div>
+                    <div class="card-middle">
+                        <div>
+                            <h2 class="card-title">Shell</h2>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ultrices odio vitae malesuada.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ultrices odio vitae malesuada.
+                            </p>
+                        </div>
+                        <div class="card-bottom">
+                            <p class="card-bottom-text">C Language</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-top">
+                        <img class="card-image-left" src="image-left.jpg">
+                        <img class="card-image-right" src="ressources/github.svg">
+                    </div>
+                    <div class="card-middle">
+                        <div>
+                            <h2 class="card-title">Puzzle Solver</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum ultrices odio vitae malesuada.</p>
+                        </div>
+                        <div class="card-bottom">
+                            <p class="card-bottom-text">Java</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr>
 
-    <!-- Gallery -->
-    <section class="wrapper-gallery" id="index-gallery">
-        <div class="heading">
-            <h3>Gallery</h3>
-        </div>
-        <div class="gallery-img img1">
-            <div><a>This is a title</a></div>
-        </div>
-        <div class="gallery-img img2">
-            <div><a>This is a title</a></div>
-        </div>
-        <div class="gallery-img img3">
-            <div><a>This is a title</a></div>
-        </div>
-        <div class="gallery-img img4">
-            <div><a>This is a title</a></div>
-        </div>
-        <div class="gallery-img img5">
-            <div><a>This is a title</a></div>
-        </div>
-        <div class="gallery-img img6">
-            <div><a>This is a title</a></div>
-        </div>
-        <div class="gallery-img img7">
-            <div><a>This is a title</a></div>
+
+    <section class="interval">
+        <span id="myskills"></span>
+        <div class="section-decorators">
+            <div class="scrollBox"></div>
+            <div class="scrollBox"></div>
+            <div class="scrollBox"></div>
         </div>
     </section>
-    <script src="script.js"></script>
 
-    <hr>
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="heading">
-            <h3>Contact</h3>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="titleSection-n">
+            <hr>
+            <p class="title" onmouseover="hoverSkills()" onmouseout="hoverEnd()">
+                SKILLS
+            </p>
+            <hr>
         </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td class="first-col coltitle">Category</td>
+                    <td class="second-col coltitle">Tools & Languages</td>
+                </tr>
+                <tr>
+                    <td class="first-col" onclick="software()">
+                        <span class="bg-fill-container">
+                            <span class="hover-bg-fill">Software Development</span>
+                        </span>
+                    </td>
+                    <td class="second-col" rowspan="5">
+                        <div class="contenu">
+                            <div class="sd">
+                                <figure>
+                                    <figcaption class="textelement">C</figcaption>
+                                    <img srcset="ressources/Language/C.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">C++</figcaption>
+                                    <img srcset="ressources/Language/Cpp.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">C#</figcaption>
+                                    <img srcset="ressources/Language/C_sharp.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Java</figcaption>
+                                    <img srcset="ressources/Language/Java.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Python</figcaption>
+                                    <img srcset="ressources/Language/Python.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Git</figcaption>
+                                    <img srcset="ressources/Language/Git.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Unix</figcaption>
+                                    <img srcset="ressources/Language/Unix.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Docker</figcaption>
+                                    <img srcset="ressources/Language/Docker.svg">
+                                </figure>
+                            </div>
+                            <div class="cg">
+                                <figure>
+                                    <figcaption class="textelement">Unity</figcaption>
+                                    <img srcset="ressources/Language/Unity.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Unreal Engine</figcaption>
+                                    <img srcset="ressources/Language/Unreal-engine.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">SDL</figcaption>
+                                    <img id="sdl" srcset="ressources/Language/SDL.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">JavaFX</figcaption>
+                                    <img srcset="ressources/Language/JavaFX.svg">
+                                </figure>
+                            </div>
+                            <div class="wd">
+                                <figure>
+                                    <figcaption class="textelement">HTML</figcaption>
+                                    <img srcset="ressources/Language/Html.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">CSS</figcaption>
+                                    <img srcset="ressources/Language/Css.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">JavaScript</figcaption>
+                                    <img srcset="ressources/Language/JavaScript.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Tailwind</figcaption>
+                                    <img srcset="ressources/Language/Tailwind.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">PHP</figcaption>
+                                    <img srcset="ressources/Language/PHP.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">SQL</figcaption>
+                                    <img srcset="ressources/Language/Sql.svg">
+                                </figure>
+                            </div>
+                            <div class="d">
+                                <figure>
+                                    <figcaption class="textelement">Photoshop</figcaption>
+                                    <img srcset="ressources/Language/Photoshop.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Illustrator</figcaption>
+                                    <img srcset="ressources/Language/Illustrator.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Aseprite</figcaption>
+                                    <img srcset="ressources/Language/Aseprite.svg">
+                                </figure>
+                                <figure>
+                                    <figcaption class="textelement">Figma</figcaption>
+                                    <img srcset="ressources/Language/Figma.svg">
+                                </figure>
+                            </div>
+                        </div>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first-col" onclick="computer()">
+                        <span class="bg-fill-container">
+                            <span class="hover-bg-fill">Computer Graphics</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first-col" onclick="web()">
+                        <span class="bg-fill-container">
+                            <span class="hover-bg-fill">Web Development</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first-col" onclick="design()">
+                        <span class="bg-fill-container">
+                            <span class="hover-bg-fill">Design</span>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first-col end">
+                        <span class="bg-fill-container">
+                            <span class="hover-bg-fill">-</span>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="interval">
+        <span id="contactme"></span>
+        <div class="section-decorators">
+            <div class="scrollBox2"></div>
+            <div class="scrollBox2"></div>
+            <div class="scrollBox2"></div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="titleSection-b">
+            <hr>
+            <p class="title" onmouseover="hoverContact()" onmouseout="hoverEnd()">
+                CONTACT
+            </p>
+            <hr>
+        </div>
+        <img class="backcolor" srcset="ressources/home.jpg">
+        <div class="backdot"></div>
+
         <div class="content">
             <div class="contactInfo">
                 <div class="contactInfoBx">
+
+                <h3>Informations</h3>
                     <div class="box">
-                        <div class="icon"><img class="icon1" src="ressources/adress-icon.png"></div>
+                        <div class="icon"><img class="icon1" srcset="ressources/adress-icon.png"></div>
                         <div class="text">
                             <h3>Adress</h3>
-                            <p>13 rue des hospices,<br>Montpellier, France,<br>34090</p>
+                            <p>Montpellier, France,<br>34090</p>
                         </div>
                     </div>
 
                     <div class="box">
-                        <div class="icon"><img class="icon2" src="ressources/phone-icon.png"></div>
+                        <div class="icon"><img class="icon2" srcset="ressources/phone-icon.png"></div>
                         <div class="text">
                             <h3>Phone</h3>
                             <p>06.67.41.66.74</p>
@@ -309,38 +580,41 @@
                     </div>
 
                     <div class="box">
-                        <div class="icon"><img class="icon3" src="ressources/envelop-icon.png"></div>
+                        <div class="icon"><img class="icon3" srcset="ressources/envelop-icon.png"></div>
                         <div class="text">
                             <h3>Email</h3>
-                            <p>julie.chevallier.contactpro@gmail.com</p>
+                            <p>juliechevallier@proton.me</p>
                         </div>
+                    </div>
+                    <div class="link-c">
+                        <a href="https://github.com/JulieChevallier" target="_blank" class="github"><img srcset="ressources/github-icon.png"></a>
+                        <a href="https://www.linkedin.com/in/julie-chevallier-66018622b/" target="_blank" class="linkedin"><img srcset="ressources/linkedin-icon.png"></a>
                     </div>
                 </div>
             </div>
             <div class="formBx">
-                <form method="post">
+                <form class="contact-form">
                     <h3>Message Me</h3>
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" placeholder="Your Message" require ></textarea>
+                    <input type="text" class="fullname" placeholder="Full Name" required>
+                    <input type="email" class="email" placeholder="Email" required>
+                    <textarea class="message" placeholder="Your Message" require ></textarea>
                     <input type="submit" value="Send">
                 </form>
-                <!-- <?php
-                if (isset($_POST['message'])) {
-                    $retour = mail('julie.chevallier.contactpro@gmail.com', 'Envoi depuis le Portfolio', $_POST['message'], 'From: webmaster@julie-chevallier.fr' . "\r\n" . 'Reply-to: ' . $_POST['email']);
-                    if($retour)
-                        echo '<p>Votre message a bien été envoyé.</p>';
-                }
-                ?> -->
             </div>
         </div>
     </section>
 
-    <hr>
-
-    <div class="copyright">
-        <p>Made by Julie Chevallier</p>
-    </div>
+    <script src="scriptTitle.js" type="text/javascript"></script>
+    <script src="scriptScroll.js" type="text/javascript"></script>
+    <script src="scriptSkills.js" type="text/javascript"></script>
+    <script src="scriptAbout.js" type="text/javascript"></script>
     <script src="scriptNav.js" type="text/javascript"></script>
+    <script src="scriptProject.js" type="text/javascript"></script>
 </body>
+<footer>
+    <div class="wrapper">
+        <h1 class="glitch">2023 ©All Rights Reserved</h1>
+        <h3 class="glitch">Julie Chevallier</h3>
+    </div>
+</footer>
 </html>
