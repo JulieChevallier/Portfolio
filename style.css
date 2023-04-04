@@ -804,6 +804,7 @@ header .logo:hover::after
     width: 99.5%;
     height: 99%;
     border: 1px solid white;
+    transform: translate(10px, 10px);
     border-radius: 5vh;
     z-index: -1;
 }
