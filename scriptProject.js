@@ -2,8 +2,7 @@
 const projectsInfo = {
   project1: {
       title: "CompanyPoll",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" +
-      "Lorem ipsum dolor sit amet, consectasasasaetur aaea adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      description: "Company Poll is a voting application designed to facilitate decision-making for businesses through a simple and streamlined interface. Each vote is encrypted using the El-Gamal algorithm. The Shamir secret sharing technique is also used to secure data. To ensure the portability and scalability of the application, Docker is used to create isolated containers that can be deployed on different platforms. Finally, to confirm the confidentiality and integrity of the data, the Zero Knowledge Proof is implemented in the application. This technique allows verifying that a person has a certain knowledge without disclosing that knowledge itself.",
       imgSrc: "ressources/Project/CompanyPoll1.png"
   },
   project2: {

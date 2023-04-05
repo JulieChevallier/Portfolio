@@ -117,7 +117,7 @@ header
     left: -900px;
     align-items: center;
     width: 1000px;
-    height: 7%;
+    height: 60px;
     background: #171717;
     transition: 0.25s;
     background-color: rgba(0,0,0,0.8);
@@ -203,7 +203,7 @@ header ul li a:hover::after
 #contactimg{
     position: absolute;
     top: 92%;
-    left: 90%;
+    right: 3%;
     display: flex;
     flex-direction: row;
     gap : 30px;
@@ -235,9 +235,8 @@ header .logo
     line-height: 62px;
     text-decoration: none;
     letter-spacing: 2px;
-    margin: 3%;
     position: absolute;
-    margin-left: 80%;
+    right: 3%;
 }
 
 header .logo::before {
@@ -366,10 +365,10 @@ header .logo:hover::after
 
 #myname{
     margin-right: 5vw;
-    margin-bottom: 5vh;
+    margin-top: -10vh;
     display: flex;
     flex-direction: column-reverse;
-    gap: 75px;
+    gap: 90px;
     text-align: right;
 }
 
@@ -469,6 +468,12 @@ header .logo:hover::after
     height: 100%;
 }
 
+.bluelink{
+    text-decoration: none;
+    color: #5a4bff;
+    font-weight: 600;
+}
+
 .profile {
     width: 100%;
     display: flex;
@@ -478,7 +483,7 @@ header .logo:hover::after
 
 .outer-square {
     position: relative;
-    width: 935px;
+    width: 80%;
     height: 438px;
     border: 1px solid black;
     display: flex;
@@ -562,7 +567,8 @@ header .logo:hover::after
 }
 
 .inner-square {
-    width: 895px;
+    z-index: 0;
+    width: 95%;
     height: 395px;
     border: 1px solid #fff;
     display: flex;
@@ -691,7 +697,7 @@ header .logo:hover::after
 }
 .project-info .project-description {
     text-align: justify;
-    font-size: 18px;
+    font-size: 1.4em;
     line-height: 1.5;
     min-width: 59vw;
     margin-bottom: 20px;
@@ -804,7 +810,8 @@ header .logo:hover::after
     width: 99.5%;
     height: 99%;
     border: 1px solid white;
-    transform: translate(10px, 10px);
+    transform: translate(0px, 0px);
+    transition: all 0.5s ease;
     border-radius: 5vh;
     z-index: -1;
 }
@@ -972,6 +979,8 @@ header .logo:hover::after
     width: 99.5%;
     height: 99%;
     border: 1px solid white;
+    transform: translate(0px, 0px);
+    transition: all 0.5s ease;
     border-radius: 5vh;
     z-index: -1;
 }
