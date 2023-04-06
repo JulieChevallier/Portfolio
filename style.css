@@ -1114,11 +1114,12 @@ header .logo:hover::after
 
 .card-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
     gap: 33px;
     margin: 50px auto;
-    justify-content: center;
+    justify-content: space-between;/*center*/
     padding: 0 auto;
 }
   
@@ -1127,6 +1128,7 @@ header .logo:hover::after
     max-width: 390px;
     height: 400px;
     width: 350px;
+    box-sizing: border-box;
     padding: 20px;
     background-color: #FFFFFF;
     color: #030117;
@@ -1535,8 +1537,6 @@ figcaption {
     }
 }
 
-
-
 .contactInfoBx .box
 {
     padding: 20px 0;
@@ -1901,11 +1901,99 @@ h1.glitch::after {
       }
 }
 
+.resp {
+    display: none;
+}
+
 
 /* RESPONSIVE */
 
-@media (max-width:991px)
-{
+@media only screen and (max-width: 600px) {
+    .interval {
+      display: none;
+    }
 
-    
+    .titleSection-n .title {
+        font-size: 18vw;
+        letter-spacing: -5px;
+    }
+
+    .titleSection-b .title {
+        font-size: 18vw;
+        letter-spacing: -5px;
+    }
+
+    .banner
+    {
+        position: relative;
+    }
+
+    .banner .dot{
+        width: 100%;
+    }
+
+    .banner .color{
+        position: absolute;
+        object-fit: cover;
+        object-position: left;
+        width: 100vw;
+    }
+
+    .typing {
+        top: 0;
+    }
+
+    .startimg{
+        display: none;
+    }
+
+    #myname{
+        margin: 0 auto;
+        top: 0;
+        right: 0;
+        display: inline;
+    }
+
+    .banner .surname{
+        font-size: 15vw;
+    }
+
+    .banner .name{
+        font-size: 15vw;
+    }
+
+    .menu,
+    .toggle{
+        display: none;
+    }
+
+    .titlePortfolio{
+        left: 10%;
+    }
+    .titlePortfolio .typing{
+        font-size: 9vw;
+    }
+    .titlePortfolio #passionate{
+        font-size: 6vw;
+    }
+    header .logo{
+        font-size: 10vw;
+        left: 20%;
+    }
+
 }
+
+@media only screen and (max-width: 1200px) {
+    .project,
+    .projectd {
+        display: none;
+    }
+
+    .resp {
+        display: block;
+    }
+}
+
+
+  
+  
