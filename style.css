@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
-/* 
-animation element scroll
-footer
-mail sender
-page projet
-
-animation chargement
-*/
 
 /* -- GLOBAL -- */
 
@@ -1408,7 +1400,67 @@ figcaption {
     margin-left: 0px;
 }
 
+.skill_box {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 0px 10px rgba(28, 28, 51, 0.15));
+}
+  
+.category_title {
+    font-size: 22px;
+    margin-bottom: -40px;
+    text-align: center;
+}
+  
+.box_content {
+    width: 80vw;
+    border-radius: 20px;
+    background-color: white;
+    padding-bottom: 50px;
+    margin: 50px 60px 50px 60px;
+}
+  
+.skills_list {
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  transform: translateY(25px);
+  justify-content: center;
+}
 
+.skill {
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    text-decoration: none;
+}
+.skill img {
+    z-index: 1  ;
+    width: 95%;
+    transform: scale(0.88);
+}
+
+
+.skill span {
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+}
+
+.skill .imgmove{
+    top: 26px;
+    position: relative;
+}
 
   
 
@@ -1464,7 +1516,9 @@ figcaption {
 
 .contact .content
 {
-    padding: 100px 200px 100px 200px;
+    margin : 100px 0px 100px 0px;
+    align-items: center;
+    padding: 3% 6% 3% 6%;
     display: flex;
     flex-direction: row;
 }
@@ -1604,177 +1658,25 @@ textarea{
 }
 
 /* FOOTER */
-footer{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: -45px;
-    z-index: 1;
-}
-
-.wrapper {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  border-radius: 1em;
-}
-
-.wrapper h3{
-    position: absolute;
-    top: 80px;
-    letter-spacing: 0.5em;
-}
-
-h3.glitch {
-    display: inline-block;
-    color: white;
-    font-weight: 800;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-h3.glitch::before,
-h3.glitch::after {
-  padding: 10px;
-  color: white;
-  content: "Julie Chevallier";
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-  top: 0;
-}
-
-h3.glitch::before {
-  left: 3px;
-  text-shadow: -3px 0 red;
-  animation-name: glitch-animation-1;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-  animation: glitch-anim-1 1s infinite linear alternate-reverse;
-}
-
-h3.glitch::after {
-  left: -3px;
-  text-shadow: -3px 0 blue;
-  animation-name: glitch-animation-2;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-  animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
-}
-
-h1.glitch {
-    display: inline-block;
-  color: white;
-  font-weight: 800;
-  position: relative;
-  font-size: 100px;
-  padding: 30px;
-
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-h1.glitch::before,
-h1.glitch::after {
-  padding: 30px;
-  color: white;
-  content: "2023 ©All Rights Reserved";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  top: 0;
-}
-
-h1.glitch::before {
-  left: 3px;
-  text-shadow: -2px 0 red;
-  animation-name: glitch-animation-1;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-  animation: glitch-anim-1 0.5s infinite linear alternate-reverse;
-}
-
-h1.glitch::after {
-  left: -3px;
-  text-shadow: -2px 0 blue;
-  animation-name: glitch-animation-2;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-  animation: glitch-anim-2 1s infinite linear alternate-reverse;
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
 }
   
-@keyframes glitch-anim-1 {
-  0% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
-  20% {
-    clip: rect(50px, 9999px, 90px, 0);
-    transform: skew(0.8deg);
-  }
-  40% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
-  60% {
-    clip: rect(30px, 9999px, 60px, 0);
-    transform: skew(0.2deg);
-  }
-  80% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
-  100% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8vw;
 }
- 
-@keyframes glitch-anim-2 {
-  0% {
-    clip: rect(60px, 9999px, 80px, 0);
-    transform: skew(0.3deg);
-  }
-  20% {
-    clip: rect(30px, 9999px, 60px, 0);
-    transform: skew(0.2deg);
-  }
-  40% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
-  60% {
-    clip: rect(50px, 9999px, 90px, 0);
-    transform: skew(0.8deg);
-  }
-  80% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
-  100% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(0.5deg);
-  }
+  
+@media only screen and (max-width: 768px) {
+    .footer {
+      max-width: 90%;
+    }
 }
+
+/* INTERVAL */
 
 .interval {
     width: 100vw;
@@ -1908,6 +1810,13 @@ h1.glitch::after {
 
 /* RESPONSIVE */
 
+@media only screen and (max-width: 732px) {
+    #projects .color,
+    #projects .dot {
+        height: 550vh;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .interval {
       display: none;
@@ -1926,17 +1835,6 @@ h1.glitch::after {
     .banner
     {
         position: relative;
-    }
-
-    .banner .dot{
-        width: 100%;
-    }
-
-    .banner .color{
-        position: absolute;
-        object-fit: cover;
-        object-position: left;
-        width: 100vw;
     }
 
     .typing {
@@ -1962,11 +1860,6 @@ h1.glitch::after {
         font-size: 15vw;
     }
 
-    .menu,
-    .toggle{
-        display: none;
-    }
-
     .titlePortfolio{
         left: 10%;
     }
@@ -1980,20 +1873,60 @@ h1.glitch::after {
         font-size: 10vw;
         left: 20%;
     }
-
+}
+@media only screen and (max-width: 930px) {
+    .menu,
+    .toggle{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .project,
-    .projectd {
+    .projectd,
+    .table {
         display: none;
     }
 
     .resp {
         display: block;
     }
+
+    .banner .dot{
+        width: 100%;
+    }
+
+    .banner .color{
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 100vw;
+    }
+
+    #projects .dot {
+        width: 100%;
+    }
+    
+    #projects .color {
+        position: absolute;
+        object-fit: cover;
+        object-position: calc(30%);
+        width: 100vw;
+    }
+
+
+    #contact .backdot {
+        width: 100%;
+    }
+    
+    #contact .backcolor {
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 100vw;
+    }
+
+    .resp2 {
+        display: none;
+    }
 }
-
-
-  
-  
