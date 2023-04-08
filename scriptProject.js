@@ -16,7 +16,7 @@ const projectsInfo = {
     imgSrc: "ressources/startimg.png"
   },
   project4: {
-    title: "Ticket to Ride Europe",
+    title: "Ticket to Ride",
     description: "A digital adaptation of the famous board game of the same name created by Alan R. Moon in 2004. Developed in Java & JavaFx, using mathematical concepts such as Graph Theory, it allows multiple players to play locally. Each player must collect cards in order to build railways across Europe, while trying to connect cities together using as few cards as possible. Secret destination routes can also be completed to score extra points. Ticket to Ride is an easy-to-learn strategy game that offers a fun experience for players of all levels.",
     imgSrc: "ressources/Project/AventuriersDuRail1.png"
   },
