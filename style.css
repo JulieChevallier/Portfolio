@@ -168,7 +168,6 @@ header ul li a:hover::after
     position: absolute;
     top: 25vh;
     left: 150px;
-    width: 90%;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -1396,7 +1395,7 @@ figcaption {
 }
 
 .skill_box {
-    width: 100%;
+    width: 100vw;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -1414,7 +1413,6 @@ figcaption {
 }
   
 .box_content {
-    width: 80vw;
     border-radius: 20px;
     background-color: white;
     padding-bottom: 50px;
