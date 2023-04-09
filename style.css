@@ -1523,13 +1523,13 @@ figcaption {
     min-width: 60%;
 }
 
-.formBx form
+.formBx .contact-form
 {
     display: flex;
     flex-direction: column;
 }
 
-.formBx form h3,
+.formBx .contact-form h3,
 .contactInfoBx h3
 {
     color: #fff;
@@ -1538,8 +1538,10 @@ figcaption {
     margin-bottom: 10px;
 }
 
-.formBx form input,
-.formBx form textarea
+
+.formBx .contact-form input,
+.formBx .contact-form textarea,
+.formBx .contact-form button
 {
     margin-bottom: 20px;
     padding: 15px;
@@ -1551,12 +1553,12 @@ figcaption {
     resize: none;
 }
 
-.formBx form textarea
+.formBx .contact-form textarea
 {
     min-height: 200px;
 }
 
-.formBx form input[type="submit"]
+.formBx .contact-form button
 {
     max-width: 100px;
     background: linear-gradient(90deg, #8a2cf7, #3c59fd  , #dd33cf, #8a2cf7);
@@ -1570,7 +1572,7 @@ figcaption {
     border-radius: 5px;
 }
 
-.formBx form input[type="submit"]:hover
+.formBx .contact-form button:hover
 {
     animation: animate 8s linear infinite;
 }

@@ -828,16 +828,25 @@
                 </div>
             </div>
             <div class="formBx resp2">
-                <form class="contact-form">
+                <div class="contact-form">
                     <h3>Message Me</h3>
-                    <input type="text" class="fullname" placeholder="Full Name" required>
-                    <input type="email" class="email" placeholder="Email" required>
-                    <textarea class="message" placeholder="Your Message" require ></textarea>
-                    <input type="submit" value="Send">
-                </form>
+                    <input id="name" type="text" class="fullname" placeholder="Full Name" required>
+                    <input id="email" type="email" class="email" placeholder="Email" required>
+                    <textarea id="message" class="message" placeholder="Your Message" require ></textarea>
+                    <button onclick="sendMail()">Send</button>
+                </div>
             </div>
         </div>
     </section>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("X7mn8r1g-pv63iyfA");
+    })();
+    </script>
 
     <script src="scriptTitle.js" type="text/javascript"></script>
     <script src="scriptScroll.js" type="text/javascript"></script>
@@ -845,6 +854,7 @@
     <script src="scriptAbout.js" type="text/javascript"></script>
     <script src="scriptNav.js" type="text/javascript"></script>
     <script src="scriptProject.js" type="text/javascript"></script>
+    <script src="scriptContact.js" type="text/javascript"></script>
 </body>
 <footer>
     <div class="footer">
