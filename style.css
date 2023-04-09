@@ -616,7 +616,7 @@ header .logo:hover::after
     top: -10vh;
     left: 0;
     width: 100%;
-    height: 308vh;
+    height: 130%;
     background: url(ressources/bg-pattern.png) repeat;
 }
 
@@ -631,7 +631,7 @@ header .logo:hover::after
     align-items: center;
     opacity: 85%;
     width: 200%;
-    height: 308vh;
+    height: 130%;
     transform: scaleY(-1);
 }
 
@@ -1473,7 +1473,7 @@ figcaption {
     top: -10vh;
     left: 0;
     width: 100%;
-    height: 110vh;
+    height: 140%;
     background: url(ressources/bg-pattern.png) repeat;
 }
 
@@ -1488,7 +1488,7 @@ figcaption {
     align-items: center;
     opacity: 85%;
     width: 200%;
-    height: 110vh;
+    height: 140%;
 }
 
 #contact hr {
@@ -1804,13 +1804,6 @@ footer {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 732px) {
-    #projects .color,
-    #projects .dot {
-        height: 550vh;
-    }
-}
-
 @media only screen and (max-width: 600px) {
     .interval {
       display: none;
@@ -1875,6 +1868,12 @@ footer {
     }
 }
 
+@media  only screen and (max-width: 799px) {
+    .resp2 {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .project,
     .projectd,
@@ -1918,9 +1917,5 @@ footer {
         object-fit: cover;
         object-position: center;
         width: 100vw;
-    }
-
-    .resp2 {
-        display: none;
     }
 }
