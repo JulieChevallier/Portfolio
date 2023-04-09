@@ -1509,6 +1509,10 @@ figcaption {
     margin-bottom: 10%;
 }
 
+.link-c .cv{
+    width: 14%;
+}
+
 .contact .content
 {
     margin : 100px 0px 100px 0px;
