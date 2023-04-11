@@ -114,7 +114,8 @@ header
     transition: 0.25s;
     background-color: rgba(0,0,0,0.8);
     padding: 0px 150px;
-    gap: 40px;
+    gap: 4%;
+    z-index: 1;
 }
   
 .menu.active {
@@ -152,6 +153,7 @@ header ul li a:hover::after
     background-repeat: no-repeat;
     background-size: 30px;
     cursor: pointer;
+    z-index: 1;
 }
 .toggle.active
 {
@@ -1867,15 +1869,13 @@ footer {
         left: 20%;
     }
 }
-@media only screen and (max-width: 930px) {
-    .menu,
-    .toggle{
-        display: none;
-    }
-}
 
 @media  only screen and (max-width: 799px) {
     .resp2 {
+        display: none;
+    }
+    .menu,
+    .toggle{
         display: none;
     }
 }
