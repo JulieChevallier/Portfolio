@@ -1417,6 +1417,7 @@ figcaption {
     background-color: white;
     padding-bottom: 50px;
     margin: 40px;
+    width: 80vw;
 }
   
 .skills_list {
@@ -1772,7 +1773,6 @@ footer {
 .scroll-down .scrollBox2 {
     transform: translateX(-100vw);
 }
-  
 
 
 @media screen and (min-width: 800px) {

@@ -12,8 +12,8 @@ const projectsInfo = {
   },
   project3: {
     title: "TimeBomb",
-    description: "A 2D platformer designed for two-player local play. Developed in only 32 hours with Unity and featuring an elegant design created on Aseprite, it offers fast and efficient gameplay. The goal of the game is to avoid ending up with the bomb at the end of the time limit. To make the game even more exciting, various features have been added, such as random weather events, varied maps, and custom items. All of these elements add an extra dimension to the gameplay, allowing players to fully enjoy the game and have fun. TimeBomb is a unique blend of competition and time-based adventure, perfect for a fun time with friends. This game won two prestigious awards at the Code Game Jam, 7th edition [2023]. It was chosen by the public as the winner of the Student Prize and by the professionals as the winner of the Coup de Cœur Prize. This double distinction testifies to the exceptional quality of TimeBomb, which seduced both the public and experts in the field.",
-    imgSrc: "ressources/startimg.png"
+    description: "A 2D platformer designed for two-player local play. Developed in only 32 hours with Unity and featuring an elegant design created on Aseprite, it offers fast and efficient gameplay. The goal of the game is to avoid ending up with the bomb at the end of the time limit. To make the game even more exciting, various features have been added, such as random weather events, varied maps, and custom items. All of these elements add an extra dimension to the gameplay, allowing players to fully enjoy the game and have fun. TimeBomb is a unique blend of competition and time-based adventure, perfect for a fun time with friends. This game won two prestigious awards at the Code Game Jam, 7th edition [2023]. It was chosen by the public as the winner of the Student Prize and by the professionals as the winner of the 'Coup de Cœur Prize'. This double distinction testifies to the exceptional quality of TimeBomb, which seduced both the public and experts in the field.",
+    imgSrc: "ressources/Project/CGJ1.png"
   },
   project4: {
     title: "Ticket to Ride",
