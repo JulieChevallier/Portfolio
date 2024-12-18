@@ -3,6 +3,6 @@ var text = document.querySelector('.textcoord');
 
 outerSquare.addEventListener('mousemove', function(event) {
   var x = event.clientX - outerSquare.getBoundingClientRect().left;
-  var y = event.clientY - outerSquare.getBoundingClientRect().top;
+  var y = Math.round(event.clientY - outerSquare.getBoundingClientRect().top);
   text.textContent = 'X=' + x + ', Y=' + y;
 });
